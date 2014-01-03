@@ -6,6 +6,7 @@ Ideally, these people are also well-dressed. You know, people like yourself.
 
 It is built with the following stack (top to bottom):
 
+font-awesome 4
 bootstrap 3
 haml/sass
 rails 4.0.2
