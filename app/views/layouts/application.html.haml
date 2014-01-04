@@ -9,7 +9,7 @@
     %header
       %nav.navbar.navbar-default(role="navigation")
         .navbar-header
-          %a.navbar-brand
+          = link_to root_path, class: "navbar-brand" do
             = fa_icon "sun-o", text: "DapperNews"
         .collapse.navbar-collapse
           %ul.nav.navbar-nav
