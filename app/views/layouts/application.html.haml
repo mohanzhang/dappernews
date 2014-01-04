@@ -6,5 +6,18 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    %h1 hi this is now using bootstrap
-    = yield
+    %header
+      %nav.navbar.navbar-default(role="navigation")
+        .navbar-header
+          %a.navbar-brand
+            = fa_icon "sun-o", text: "DapperNews"
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              %a(href="#")
+                = fa_icon "plus", text: "New Item"
+          %p.navbar-text.navbar-right
+            "Oh you're so dapper!"
+
+    .container
+      = yield
