@@ -1,0 +1,9 @@
+.row
+  .col-md-8.col-md-offset-2
+    %h3 Remember: You're about to make us all greater
+    %hr
+    = bootstrap_form_for @item do |f|
+      = f.text_field :title
+      = f.text_field :url
+      = f.text_field :username
+      = f.submit "Unleash"
