@@ -43,6 +43,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
 end
 
+# for url parsing
+gem "domainatrix"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
