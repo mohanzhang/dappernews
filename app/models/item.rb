@@ -1,5 +1,9 @@
 class Item < ActiveRecord::Base
-  has_many :comments
+  has_many :comments, -> { order('created_at DESC') }
+
+  validates :url, presence: true, format: { with: URI.regexp }
+  validates :username, presence: true
+  validates :title, presence: true
 
   # Return the domain of the url
   def url_preview
