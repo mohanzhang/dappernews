@@ -4,7 +4,8 @@
       .row
         .col-md-1
           .upvoteControls
-            = fa_icon "thumbs-o-up", class: "fa-lg"
+            = link_to upvote_item_path(item), remote: true, method: :post do
+              = fa_icon "thumbs-o-up", class: "fa-lg"
             = item.upvotes
         .col-md-11
           %h4

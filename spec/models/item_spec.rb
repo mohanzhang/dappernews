@@ -15,4 +15,11 @@ describe Item do
     item = create(:item, url: "http://targetdomain.com")
     expect(item.url_preview).to eq("targetdomain.com")
   end
+
+  it "can be upvoted" do
+    item = create(:item, upvotes: 3)
+    item.upvote!
+    item.upvote!
+    expect(item.upvotes).to eq(5)
+  end
 end

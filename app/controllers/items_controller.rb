@@ -16,6 +16,11 @@ class ItemsController < ApplicationController
     end
   end
 
+  def upvote
+    @item = Item.find(params[:id])
+    @item.upvote!
+  end
+
   private
 
   def item_params
