@@ -1,0 +1,19 @@
+= render @item
+%hr
+.row
+  .col-md-12
+    %h4 Here follows a highly intelligent and relevant discussion:
+    - @item.comments.each do |comment|
+      .comment
+        .comment-header
+          (#{comment.created_at}) #{comment.username} said:
+        .comment-body
+          = comment.content
+
+.row
+  .col-md-12
+    %h5 ... to which you shall add
+    = bootstrap_form_for [@item, @comment] do |f|
+      = f.text_field :username
+      = f.text_area :content
+      = f.submit "Behold!"

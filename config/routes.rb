@@ -17,6 +17,8 @@ Dappernews::Application.routes.draw do
     member do
       post 'upvote'
     end
+
+    resources :comments
   end
 
   # Example resource route with options:
